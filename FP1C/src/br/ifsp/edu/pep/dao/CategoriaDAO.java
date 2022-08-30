@@ -1,5 +1,6 @@
 package br.ifsp.edu.pep.dao;
 
+import br.edu.ifsp.pep.dao.AbstractDAO;
 import br.edu.ifsp.pep.modelo.Categoria;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;

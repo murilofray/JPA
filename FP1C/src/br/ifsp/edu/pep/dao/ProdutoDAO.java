@@ -1,5 +1,6 @@
 package br.ifsp.edu.pep.dao;
 
+import br.edu.ifsp.pep.dao.AbstractDAO;
 import br.edu.ifsp.pep.modelo.Produto;
 import java.util.List;
 import javax.persistence.TypedQuery;
