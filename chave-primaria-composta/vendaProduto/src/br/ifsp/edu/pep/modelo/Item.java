@@ -19,20 +19,20 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "itens")
-public class itens implements Serializable {
+public class Item implements Serializable {
     
     @EmbeddedId
     private itensPK itemPK;
 
     @ManyToOne
-    @JoinColumn(name = "venda_id", nullable = false)
+    @JoinColumn(name = "venda_id")
     private Venda venda;
 
     @ManyToOne
     @JoinColumn(name = "produto_id", nullable = false)
     private Produto produto;
     
-    @Column(name = "quantidade", nullable = false)
+    @Column(name = "quantidade")
     private int quantidade;
     
     @Column(name = "preco", nullable = false,  precision = 8, scale = 2)
@@ -62,8 +62,6 @@ public class itens implements Serializable {
         this.produto = produto;
     }
 
-    
-    
     public int getQuantidade() {
         return quantidade;
     }

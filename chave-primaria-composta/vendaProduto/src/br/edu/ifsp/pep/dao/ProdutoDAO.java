@@ -5,7 +5,9 @@
 package br.edu.ifsp.pep.dao;
 
 import br.ifsp.edu.pep.modelo.Produto;
+import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -27,7 +29,11 @@ public class ProdutoDAO extends AbstractDAO<Produto>{
     protected EntityManager getEntityManager() {
         return super.getEntityManager(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
-
-
     
+    public List<Produto> obeterTodos()
+    {
+        TypedQuery<Produto> query = getEntityManager().createQuery("SELECT p FROM Produto p", Produto.class);
+        return query.getResultList();
+              
+    }
 }
